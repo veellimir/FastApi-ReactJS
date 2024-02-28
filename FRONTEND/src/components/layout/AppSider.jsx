@@ -64,7 +64,7 @@ const AppSider = () => {
               <List.Item>
                 <span>{item.title}</span>
                 <span>
-                {item.withTag && <Tag color={asset.grow ? 'green' : 'red'}>{asset.growPercent}%</Tag>}
+                { item.withTag && <Tag color={asset.grow ? 'green' : 'red'}>{asset.growPercent}%</Tag>}
                 { item.isPlain && item.value}
                 { !item.isPlain && <Typography.Text type={ asset.grow ? 'success' : 'danger'}>{item.value.toFixed(2)}$</Typography.Text>}
                 </span>
