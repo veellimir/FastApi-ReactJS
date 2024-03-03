@@ -22,7 +22,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # await delete_tables()
