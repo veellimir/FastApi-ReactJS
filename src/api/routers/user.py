@@ -7,7 +7,7 @@ from src.database.repository.user import UserRepository
 
 router = APIRouter(
     prefix='/users',
-    tags=['Пользователи']
+    tags=['users']
 )
 
 

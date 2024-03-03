@@ -3,10 +3,12 @@ from contextlib import asynccontextmanager
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.api.routers.user import router as user_router
+from src.api.routers.currency import router as currency_router
 from src.database.database import create_tables, delete_tables
 
 
-app = FastAPI()
+app = FastAPI(title='Crypto')
+
 
 origins = [
     "http://localhost:5173",
@@ -33,3 +35,4 @@ async def lifespan(app: FastAPI):
 
 # app = FastAPI(lifespan=lifespan)
 app.include_router(user_router)
+app.include_router(currency_router)

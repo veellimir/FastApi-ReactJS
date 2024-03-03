@@ -11,3 +11,12 @@ export const getAllUser = () => {
         throw error;
     });
 };
+
+export const getCurrency = () => {
+    return axios
+    .get('http://127.0.0.1:8000/currency/suggest/?query=rub')
+    .then((response) => {
+        console.log('currency', response.data);
+        return response.data
+    })
+}
