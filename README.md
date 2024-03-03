@@ -16,3 +16,5 @@
       http://127.0.0.1:8000/
 <hr>
 
+### 3. Сохранить зависимости:
+    pip3 freeze > requirements.txt
